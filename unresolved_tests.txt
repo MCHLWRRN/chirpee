@@ -1,0 +1,6 @@
+  1) Error:
+UsersSignupTest#test_invalid_signup_information:
+AbstractController::ActionNotFound: The action 'news' could not be found for UsersController
+    test/integration/users_signup_test.rb:6:in `block in <class:UsersSignupTest>'
+
+16 runs, 31 assertions, 0 failures, 1 errors, 0 skips
