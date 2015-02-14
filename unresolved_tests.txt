@@ -7,14 +7,13 @@ AbstractController::ActionNotFound: The action 'news' could not be found for Use
 
 (UNRESOLVED)
 
-  1) Failure:
-SiteLayoutTest#test_layout_links [/home/mchlwrrn/code/chirpee/test/integration/site_layout_test.rb:8]:
-Expected exactly 2 elements matching "a[href='/']", found 3.
-Expected: 2
-  Actual: 3
+# Running:
 
+.EEEEE....F..........E.....E.FE.F...
 
-  2) Error:
+Finished in 1.124614s, 32.0110 runs/s, 45.3489 assertions/s.
+
+  1) Error:
 UsersLoginTest#test_login_with_remembering:
 BCrypt::Errors::InvalidHash: invalid hash
     app/controllers/sessions_controller.rb:8:in `create'
@@ -22,18 +21,77 @@ BCrypt::Errors::InvalidHash: invalid hash
     test/integration/users_login_test.rb:41:in `block in <class:UsersLoginTest>'
 
 
-  3) Error:
+  2) Error:
 UsersLoginTest#test_login_with_valid_information_followed_by_logout:
 BCrypt::Errors::InvalidHash: invalid hash
     app/controllers/sessions_controller.rb:8:in `create'
     test/integration/users_login_test.rb:21:in `block in <class:UsersLoginTest>'
 
 
-  4) Error:
+  3) Error:
 UsersLoginTest#test_login_without_remembering:
 BCrypt::Errors::InvalidHash: invalid hash
     app/controllers/sessions_controller.rb:8:in `create'
     test/test_helper.rb:21:in `log_in_as'
     test/integration/users_login_test.rb:46:in `block in <class:UsersLoginTest>'
 
-23 runs, 39 assertions, 1 failures, 3 errors, 0 skips
+
+  4) Error:
+UsersEditTest#test_successful_edit_with_friendly_forwarding:
+BCrypt::Errors::InvalidHash: invalid hash
+    app/controllers/sessions_controller.rb:8:in `create'
+    test/test_helper.rb:21:in `log_in_as'
+    test/integration/users_edit_test.rb:19:in `block in <class:UsersEditTest>'
+
+
+  5) Error:
+UsersEditTest#test_unsuccessful_edit:
+BCrypt::Errors::InvalidHash: invalid hash
+    app/controllers/sessions_controller.rb:8:in `create'
+    test/test_helper.rb:21:in `log_in_as'
+    test/integration/users_edit_test.rb:10:in `block in <class:UsersEditTest>'
+
+
+  6) Failure:
+SiteLayoutTest#test_layout_links [/home/mchlwrrn/code/chirpee/test/integration/site_layout_test.rb:8]:
+Expected exactly 2 elements matching "a[href='/']", found 3.
+Expected: 2
+  Actual: 3
+
+
+  7) Error:
+UsersIndexTest#test_index_as_admin_including_pagination_and_delete_links:
+BCrypt::Errors::InvalidHash: invalid hash
+    app/controllers/sessions_controller.rb:8:in `create'
+    test/test_helper.rb:21:in `log_in_as'
+    test/integration/users_index_test.rb:11:in `block in <class:UsersIndexTest>'
+
+
+  8) Error:
+UsersControllerTest#test_should_redirect_destroy_when_not_logged_in:
+NoMethodError: undefined method `admin?' for nil:NilClass
+    app/controllers/users_controller.rb:72:in `admin_user'
+    test/controllers/users_controller_test.rb:48:in `block (2 levels) in <class:UsersControllerTest>'
+    test/controllers/users_controller_test.rb:47:in `block in <class:UsersControllerTest>'
+
+
+  9) Failure:
+UsersControllerTest#test_should_redirect_edit_when_not_logged_in [/home/mchlwrrn/code/chirpee/test/controllers/users_controller_test.rb:22]:
+Expected true to be nil or false
+
+
+ 10) Error:
+UsersControllerTest#test_should_redirect_index_when_not_logged_in:
+ActionView::Template::Error: undefined method `admin?' for nil:NilClass
+    app/views/users/_user.html.erb:4:in `_app_views_users__user_html_erb___285953557597382456_69913181980120'
+    app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___392247046654591796_69913181194740'
+    test/controllers/users_controller_test.rb:11:in `block in <class:UsersControllerTest>'
+
+
+ 11) Failure:
+UsersControllerTest#test_should_redirect_update_when_not_logged_in [/home/mchlwrrn/code/chirpee/test/controllers/users_controller_test.rb:28]:
+Expected true to be nil or false
+
+36 runs, 51 assertions, 3 failures, 8 errors, 0 skips
+
+
